@@ -1,5 +1,7 @@
 box::use(
+  graphics[hist],
   shiny[...],
+  stats[rpois],
 )
 
 #' @export
@@ -12,7 +14,7 @@ ui <- function(id) {
 server <- function(id) {
   moduleServer(id, function(input, output, session) {
     output$my_plot <- renderPlot({
-      hist(mtcars$mpg)
+      hist(rpois(100, 50))
     })
   })
 }

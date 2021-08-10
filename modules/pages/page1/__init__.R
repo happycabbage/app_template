@@ -1,5 +1,6 @@
 box::use(
   shiny[...],
+  shinydashboard[box],
 )
 box::use(
   modules/pages/page1/submodule,
@@ -12,7 +13,7 @@ ui <- function(id) {
     h3("Page 1"),
     box(
       title = "Box",
-      submodule$ui("submodule")
+      submodule$ui(ns("submodule"))
     )
   )
 }

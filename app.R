@@ -13,7 +13,7 @@ box::use(
 )
 
 # Global settings / data (identical for all user sessions)
-css <- sass(list(clr, sass_file("styles/main.scss")))
+css <- sass(sass_file("styles/main.scss"))
 
 ui <- dashboardPage(
   dashboardHeader(title = "[NAME OF THE APP]"),
