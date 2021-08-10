@@ -1,0 +1,6 @@
+linters:
+  with_defaults(
+    infix_spaces_linter = NULL, # Doesn't play nice with box module paths.
+    line_length_linter(100),
+    object_usage_linter = NULL # Doesn't work with box.
+  )
